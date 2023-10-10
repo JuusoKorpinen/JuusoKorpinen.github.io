@@ -1,10 +1,13 @@
 <!DOCTYPE html>
-<html lang="en"></html>
+<html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <title>Home</title>
     <link rel="stylesheet" href="\css\style.css">
+    <script type=""></script>
 </head>
+
 <body>
     <div class="container">
         <header>
@@ -20,13 +23,32 @@
             </nav>
         </header>
         <aside>
-            <h1>Aside</h1>
+            <label for="city">
+                <h3>Search</h3>
+            </label>
+            <input type="text" id="city" name="city">
+            <button onclick="getCurrentWeather(),showCurrent(),get5DayForecast()">Get weather</button>
         </aside>
         <main>
-            <h1>Content</h1>
+            <weatherMenu>
+                <button id="btnCurrent" onclick="showCurrent()">Current</button>
+                <button id="btnForecast" onclick="showForecast()">5 days</button>
+            </weatherMenu>
+            <div class="weather">
+                <div class="current">
+
+                </div>
+                <div class="forecast">
+
+                </div>
+            </div>
         </main>
         <footer>
-            <h1>Footer</h1>
+            <h1 onclick="quack()">Don't click this</h1>
+            <audio id="quack" src="/sounds/quack.mp3"></audio>
         </footer>
     </div>
+    <script src="/javascript/app.js"></script>
 </body>
+
+</html>
