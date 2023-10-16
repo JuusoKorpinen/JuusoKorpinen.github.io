@@ -19,7 +19,6 @@ ul {
 
 a {
     text-decoration: none;
-    color: #f9f9f9;
 }
 
 h1 {
@@ -50,23 +49,22 @@ p {
 }
 
 header {
-    background-color: #F9F9F9;
+    background-color: #91C8E4;
     grid-column-start: span 3;
 }
 
 aside {
-    background-color: #313338;
+    background-color: #4682A9;
     grid-column-start: span 1;
-
 }
 
 main {
-    background-color: #fffffc;
+    background-color: #749BC2;
     grid-column-start: span 2;
 }
 
 footer {
-    background-color: #F9F9F9;
+    background-color: #F6F4EB;
     grid-column-start: span 3;
     text-align: center;
     display: flex;
@@ -75,7 +73,7 @@ footer {
 
 }
 
-@media (max-width:768px) {
+@media (max-width:1080px) {
     .container {
         grid-template-columns: 1fr;
         grid-template-rows: 100px auto auto 100px;
@@ -102,7 +100,6 @@ nav {
     justify-content: space-between;
     width: 70%;
     margin: 0 auto;
-
 }
 
 nav ul li {
@@ -129,27 +126,28 @@ aside {
     align-items: left;
     justify-content: top;
     padding: 0 16px 16px 16px;
-    background-color: darkgray;
 }
 
 
 /* Weather menu */
-weatherMenu {
+.weatherMenu {
     display: flex;
     flex-direction: row;
     align-items: center;
     justify-content: space-between;
     padding: 16px;
+    background-color: #4682A9;
+}
+
+button {
     width: 100%;
-    padding: 16px;
-    background-color: gray;
-    button {
-        width: 100%;
-        background-color: gray;
-    }
-    button:hover {
-        background-color: #202020;
-    }
+    background-color: #91C8E4;
+    border-color: #202020;
+    border-radius: 8px;
+    border-width: 1px;
+    padding: 8px;
+    font-weight: 500;
+    color: #202020;
 }
 
 /* Current weather */
@@ -163,10 +161,10 @@ weatherMenu {
 }
 
 .weatherCurrent {
+    height: 100%;
     width: 100%;
-    height: auto;
     padding: 16px;
-    background-color: gray;
+    background-color: #749BC2;
 
     img {
         max-width: 100%;
@@ -189,7 +187,7 @@ weatherMenu {
     height: auto;
     width: 20%;
     padding: 16px;
-    background-color: gray;
+    background-color: #749BC2;
 
     img {
         max-width: 100%;
@@ -198,7 +196,7 @@ weatherMenu {
     }
 }
 
-@media (max-width:768px) {
+@media (max-width: 1080px) {
     nav {
         position: relative;
     }
@@ -206,7 +204,7 @@ weatherMenu {
     nav ul {
         display: none;
         width: 100%;
-        background-color: grey;
+        background-color: #F6F4EB;
         position: absolute;
         top: 100px;
         height: 40vh;
@@ -218,7 +216,7 @@ weatherMenu {
     }
 
     nav ul li a {
-        color: #fffffc;
+        color: #202020;
     }
 
     a.mobile {
@@ -235,8 +233,6 @@ weatherMenu {
         width: 1fr;
         height: auto;
         padding: 16px;
-        background-color: gray;
-
         img {
             max-width: 100%;
             margin-left: auto;
@@ -253,8 +249,6 @@ weatherMenu {
         height: auto;
         width: 50%;
         padding: 16px;
-        background-color: gray;
-
         img {
             max-width: 100%;
             margin-left: auto;
