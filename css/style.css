@@ -9,7 +9,7 @@
 
 body {
     font-family: 'Poppins', sans-serif;
-    background: url(/images/rainBackgroundDark.jpg);
+    background: url(/images/bgRain.jpg);
     background-size: cover;
 }
 
@@ -21,10 +21,21 @@ a {
     text-decoration: none;
 }
 
+h1,
+h2,
+h3,
+p {
+    color: #F6F4EB;
+    font-weight: 400;
+}
+
 h1 {
-    color: lightgray;
     margin: 16px 0;
     font-weight: 800;
+}
+
+h2 {
+    font-weight: 500;
 }
 
 h3 {
@@ -35,7 +46,29 @@ h3 {
 p {
     margin: 16px 0;
     line-height: 1.75;
-    font-weight: 400;
+}
+
+button {
+    color: #F6F4EB;
+    background-color: #91C8E4;
+    border-color: #F6F4EB;
+    width: 100%;
+    border-radius: 8px;
+    border-width: 2px;
+    padding: 8px;
+    font-weight: 800;
+    cursor: pointer;
+
+}
+
+button:hover {
+    background-color: #749BC2;
+}
+
+img {
+    max-width: 100%;
+    margin-left: auto;
+    margin-right: auto;
 }
 
 /* Layout */
@@ -51,11 +84,19 @@ p {
 header {
     background-color: #91C8E4;
     grid-column-start: span 3;
+
+    line-height: 100px;
 }
 
 aside {
     background-color: #4682A9;
     grid-column-start: span 1;
+
+    display: flex;
+    flex-direction: column;
+    align-items: left;
+    justify-content: top;
+    padding: 0 16px 16px 16px;
 }
 
 main {
@@ -73,6 +114,7 @@ footer {
 
 }
 
+/* Mobile layout */
 @media (max-width:1080px) {
     .container {
         grid-template-columns: 1fr;
@@ -88,11 +130,7 @@ footer {
     }
 }
 
-
 /* Navigation */
-header {
-    line-height: 100px;
-}
 
 nav {
     display: flex;
@@ -108,7 +146,8 @@ nav ul li {
 }
 
 nav ul li a {
-    color: #202020;
+    color: #F6F4EB;
+    font-weight: 800;
 }
 
 .mobile {
@@ -119,16 +158,6 @@ nav ul li a {
     display: block;
 }
 
-/* Aside */
-aside {
-    display: flex;
-    flex-direction: column;
-    align-items: left;
-    justify-content: top;
-    padding: 0 16px 16px 16px;
-}
-
-
 /* Weather menu */
 .weatherMenu {
     display: flex;
@@ -137,17 +166,6 @@ aside {
     justify-content: space-between;
     padding: 16px;
     background-color: #4682A9;
-}
-
-button {
-    width: 100%;
-    background-color: #91C8E4;
-    border-color: #202020;
-    border-radius: 8px;
-    border-width: 1px;
-    padding: 8px;
-    font-weight: 500;
-    color: #202020;
 }
 
 /* Current weather */
@@ -165,12 +183,6 @@ button {
     width: 100%;
     padding: 16px;
     background-color: #749BC2;
-
-    img {
-        max-width: 100%;
-        margin-left: auto;
-        margin-right: auto;
-    }
 }
 
 /* Forecast */
@@ -189,11 +201,6 @@ button {
     padding: 16px;
     background-color: #749BC2;
 
-    img {
-        max-width: 100%;
-        margin-left: auto;
-        margin-right: auto;
-    }
 }
 
 @media (max-width: 1080px) {
@@ -220,7 +227,7 @@ button {
     }
 
     a.mobile {
-        color: #202020;
+        color: #F6F4EB;
         font-size: 32px;
         display: block;
     }
@@ -233,11 +240,6 @@ button {
         width: 1fr;
         height: auto;
         padding: 16px;
-        img {
-            max-width: 100%;
-            margin-left: auto;
-            margin-right: auto;
-        }
     }
 
     .showForecast {
@@ -249,10 +251,5 @@ button {
         height: auto;
         width: 50%;
         padding: 16px;
-        img {
-            max-width: 100%;
-            margin-left: auto;
-            margin-right: auto;
-        }
     }
 }
