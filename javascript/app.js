@@ -114,7 +114,7 @@ function get5DayForecast() {
     })
 }
 
-/* Quack sound */
+/* Quack sound is played when you click the text in the footer of the page */
 function quack() {
   let quack = document.querySelector('#quack')
   quack.play()
