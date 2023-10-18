@@ -30,6 +30,7 @@ p {
 }
 
 h1 {
+    font-size: 32px;
     margin: 16px 0;
     font-weight: 800;
 }
@@ -41,6 +42,12 @@ h2 {
 h3 {
     margin: 8px 0;
     font-weight: 500;
+}
+
+h4 {
+    color: rgb(243, 237, 237);
+    margin: 16px 0;
+    font-weight: 800;
 }
 
 p {
@@ -81,6 +88,15 @@ img {
     margin: 0 auto;
 }
 
+.containerContact {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: 100px auto 60px;
+    width: 70%;
+    height: 100vh;
+    margin: 0 auto;
+}
+
 header {
     background-color: #91C8E4;
     grid-column-start: span 3;
@@ -104,6 +120,20 @@ main {
     grid-column-start: span 2;
 }
 
+.contact {
+    background-color: #749BC2;
+    grid-column-start: span 3;
+    text-align: center;
+}
+
+.contact a {
+    color: #F6F4EB;
+}
+
+.contact a:hover {
+    color: #202020;
+}
+
 footer {
     background-color: #F6F4EB;
     grid-column-start: span 3;
@@ -114,24 +144,7 @@ footer {
 
 }
 
-/* Mobile layout */
-@media (max-width:1080px) {
-    .container {
-        grid-template-columns: 1fr;
-        grid-template-rows: 100px auto auto 100px;
-        width: 100%;
-    }
-
-    header,
-    aside,
-    main,
-    footer {
-        grid-column-start: span 4;
-    }
-}
-
 /* Navigation */
-
 nav {
     display: flex;
     align-items: center;
@@ -203,7 +216,21 @@ nav ul li a {
 
 }
 
+/* Mobile layout */
 @media (max-width: 1080px) {
+    .container {
+        grid-template-columns: 1fr;
+        grid-template-rows: 100px 200px auto 100px;
+        width: 100%;
+    }
+
+    header,
+    aside,
+    main,
+    footer {
+        grid-column-start: span 4;
+    }
+
     nav {
         position: relative;
     }
